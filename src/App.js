@@ -2,11 +2,11 @@ import "./App.css";
 import { Input } from "./Input/App";
 
 import { CardList } from "./CardList/App";
-import { useState } from "react";
+
+import { useCitiesList } from "./hooks/useCitiesList";
 
 function App() {
-  const [citiesList, setCitiesList] = useState([]);
-
+  const [citiesList, setCitiesList] = useCitiesList();
   return (
     <div className="Main">
       <Input setCitiesList={setCitiesList}></Input>
