@@ -1,6 +1,6 @@
 .Main {
   background-color: #d8d8d8;
-  height: 100vh;
+  min-height: 100vh;
   padding:24px;
   
 }
@@ -37,6 +37,8 @@
 /* Card Start*/
 .CardList {
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 .Card {
 width: 200px;
@@ -45,13 +47,9 @@ border-radius: 12px;
 background-color: #3A8AC0;
 font-size: 14px;
 color: #fff;
-margin-left: 24px;
 padding: 10px;
 }
 
-.Card:first-child {
-  margin-left: 0;
-}
 .MainInfo {
   display: flex;
   flex-direction: column;
