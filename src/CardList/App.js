@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import {Card} from "../Card/App";
 import "../App.css";
 
-export const CardList = ({ citiesList }) => {
+export const CardList = ({ citiesList, dispatch}) => {
   useEffect(()=> {
  console.log('citiesList', citiesList);
   },[citiesList]);
@@ -11,7 +11,7 @@ export const CardList = ({ citiesList }) => {
     <div className="CardList">
       {
         citiesList.map((city) => (
-          <Card city={city} key={city} />
+          <Card city={city} key={city} dispatch={dispatch} />
         ))        
       }
     </div>
