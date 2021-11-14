@@ -31,6 +31,8 @@
   width: 20%;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
+  font-size: larger;
+  font-weight: 800;
 }
 
 /* Input Finish*/
@@ -39,22 +41,23 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  
 }
 .Card {
 width: 200px;
-height: fit-content;
+height: 350px;
 border-radius: 12px;
 background-color: #3A8AC0;
 font-size: 14px;
 color: #fff;
 padding: 10px;
 }
-.actionButton {
 
-}
 .DeleteCity {
   width: 2.5em;
   height: 2.5em;
+  float: right;
+
   border-radius: 50%;
   font-weight: 900;
   border:none;
@@ -66,6 +69,21 @@ padding: 10px;
   border:2px solid black;
 }
 
+.EditCity {
+  width: 4em;
+  height: 2.5em;
+  border-radius: 12px;
+  float: left;
+
+  font-weight: 900;
+  border:none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.EditCity:hover {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border:2px solid black;
+}
 
 .MainInfo {
   display: flex;
