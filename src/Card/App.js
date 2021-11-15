@@ -1,8 +1,10 @@
-import React, { memo } from "react";
+import React, { memo, useContext } from "react";
 import { useWeather } from "../hooks/useWeather";
 import "../App.css";
+import { GlobalContext } from "../App";
 
-export const Card = memo(({ city, dispatch }) => {
+export const Card = memo(({ city}) => {
+  const { dispatch } = useContext(GlobalContext);
   const data = useWeather(city);
   console.log("data", data);
   if (!data) return null;

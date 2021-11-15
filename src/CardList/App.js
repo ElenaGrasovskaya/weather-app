@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../App";
 import {Card} from "../Card/App";
 import "../App.css";
 
-export const CardList = ({ citiesList, dispatch}) => {
-  useEffect(()=> {
- console.log('citiesList', citiesList);
-  },[citiesList]);
+export const CardList = () => {
+  const { state: {citiesList} } = useContext(GlobalContext); 
+ 
 
   return (
     <div className="CardList">
       {
         citiesList.map((city) => (
-          <Card city={city} key={city} dispatch={dispatch} />
+          <Card city={city} key={city}  />
         ))        
       }
     </div>

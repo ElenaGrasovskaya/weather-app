@@ -1,9 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useContext, useRef } from "react";
 
-import "../App.css";
+import {GlobalContext} from "../App";
+import  "../App.css";
 
-export const Input = ({ dispatch, inputValue, editCity }) => {
+export const Input = () => {
   const inputRef = useRef(null);
+  const { dispatch, state: {inputValue, editCity } } = useContext(GlobalContext);
 
   const handleOnClick = () => {
     if (inputValue.length) {
@@ -27,7 +29,7 @@ export const Input = ({ dispatch, inputValue, editCity }) => {
       });
       dispatch({
         type: "RESET_INPUT_VALUE",
-      });
+      }); 
     }
 
     inputRef.current.focus();
