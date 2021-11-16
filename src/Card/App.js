@@ -3,7 +3,7 @@ import { useWeather } from "../hooks/useWeather";
 import "../App.css";
 import { GlobalContext } from "../App";
 
-export const Card = memo(({ city}) => {
+export  const Card = memo(({city}) => {
   const { dispatch } = useContext(GlobalContext);
   const data = useWeather(city);
   console.log("data", data);
