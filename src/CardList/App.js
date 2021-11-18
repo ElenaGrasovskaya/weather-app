@@ -6,6 +6,8 @@ import "../App.css";
 
 export const CardList = () => {
   const { state: {citiesList} } = useContext(GlobalContext); 
+  const { allData } = useContext(GlobalContext); 
+  console.log("allData", allData);
  
 
   return (

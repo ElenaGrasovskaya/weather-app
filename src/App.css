@@ -1,8 +1,7 @@
 .Main {
   background-color: #d8d8d8;
   min-height: 100vh;
-  padding:24px;
-  
+  padding: 24px;
 }
 /* Input Start*/
 
@@ -10,7 +9,7 @@
   display: flex;
   height: 50px;
   border-radius: 12px;
-  box-shadow: 3px 3px 12px 1px rgba(0,0,0,0.25);
+  box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.25);
   margin-bottom: 24px;
 }
 
@@ -19,13 +18,12 @@
   padding: 4px 8px;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  background-color: #3A8AC0;
+  background-color: #3a8ac0;
   font-size: 18px;
   color: #fff;
   border: none;
   outline: 0;
-
-} 
+}
 
 .Button {
   width: 20%;
@@ -41,16 +39,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  
 }
 .Card {
-width: 200px;
-height: 350px;
-border-radius: 12px;
-background-color: #3A8AC0;
-font-size: 14px;
-color: #fff;
-padding: 10px;
+  width: 200px;
+  height: 350px;
+  border-radius: 12px;
+  background-color: #3a8ac0;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px;
 }
 
 .DeleteCity {
@@ -60,13 +57,13 @@ padding: 10px;
 
   border-radius: 50%;
   font-weight: 900;
-  border:none;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 .DeleteCity:hover {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  border:2px solid black;
+  border: 2px solid black;
 }
 
 .EditCity {
@@ -76,13 +73,33 @@ padding: 10px;
   float: left;
 
   font-weight: 900;
-  border:none;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .EditCity:hover {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  border:2px solid black;
+  border: 2px solid black;
+}
+
+.week-weather {
+  margin-top: 2rem;
+  width: auto;
+  height: 2.5em;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+  font-weight: 900;
+  border: none;
+  text-decoration: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    cursor: pointer;
+}
+.week-weather:hover {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border: 2px solid black;
 }
 
 .MainInfo {
@@ -104,14 +121,13 @@ padding: 10px;
   margin-top: 12px;
   font-size: 40px;
   font-weight: 500;
-
 }
 .Temperature::after {
   content: "°";
 }
 
 .Information {
-  margin-top: 12px
+  margin-top: 12px;
 }
 
 .Information > div {

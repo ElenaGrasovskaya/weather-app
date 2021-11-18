@@ -2,7 +2,7 @@ import React, { memo, useContext } from "react";
 import { useWeather } from "../hooks/useWeather";
 import "../App.css";
 import { GlobalContext } from "../App";
-
+import { Link } from "react-router-dom";
 export  const Card = memo(({city}) => {
   const { dispatch } = useContext(GlobalContext);
   const data = useWeather(city);
@@ -45,6 +45,8 @@ export  const Card = memo(({city}) => {
       <div className="Information">
         <div>Humidity: {humidity}</div>
         <div>Feels like: {feels_like}</div>
+        <Link to="/week-weather">
+        <button className="week-weather" onClick = {handleOnDelete} >Weather for 7 days</button> </Link>
       </div>
     </div>
   );
