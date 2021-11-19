@@ -41,6 +41,10 @@ const reducer = (state, action) => {
       return { ...state, inputValue: action.payload };
     }
 
+    case "CHANGE_COORD": {
+      return { ...state, coord: action.payload };
+    }
+
     case "RESET_INPUT_VALUE": {
       return { ...state, inputValue: initialState.inputValue };
     }

@@ -3,34 +3,48 @@ import { useWeather } from "../hooks/useWeather";
 import "../App.css";
 import { GlobalContext } from "../App";
 import { Link } from "react-router-dom";
-export  const Card = memo(({city}) => {
+import { useWeekWeather } from "../hooks/useWeekWeather";
+import { WeekWeather } from "../WeekWeather/App";
+export const Card = memo(({ city }) => {
   const { dispatch } = useContext(GlobalContext);
   const data = useWeather(city);
   console.log("data", data);
   if (!data) return null;
-  if (data.cod=="404") return null;
+  if (data.cod == "404") return null;
   const { name, weather, main } = data;
   const { description, icon } = weather[0];
   const { temp, humidity, feels_like } = main;
 
-  const handleOnDelete = () =>{
-    dispatch ({
-      type: 'DELETE_CITY',
+  const handleOnDelete = () => {
+    dispatch({
+      type: "DELETE_CITY",
       payload: city,
-    })
+    });
   };
-  
-  const handleOnEdit = () =>{
-    dispatch ({
-      type: 'EDIT_CITY',
+
+  const handleOnEdit = () => {
+    dispatch({
+      type: "EDIT_CITY",
       payload: city,
-    })
+    });
   };
+
+  const handleOnCoord = () => {
+    dispatch({
+      type: "CHANGE_COORD",
+      payload: data.coord,
+    });
+  };
+
   return (
     <div className="Card">
       <div className="actionButton">
-        <button className="DeleteCity" onClick = {handleOnDelete} >X</button>
-        <button className="EditCity" onClick = {handleOnEdit} >Edit</button>
+        <button className="DeleteCity" onClick={handleOnDelete}>
+          X
+        </button>
+        <button className="EditCity" onClick={handleOnEdit}>
+          Edit
+        </button>
       </div>
       <div className="MainInfo">
         <img
@@ -46,9 +60,11 @@ export  const Card = memo(({city}) => {
         <div>Humidity: {humidity}</div>
         <div>Feels like: {feels_like}</div>
         <Link to="/week-weather">
-        <button className="week-weather" onClick = {handleOnDelete} >Weather for 7 days</button> </Link>
+          <button className="week-weather" onClick={handleOnCoord}>
+            Weather for 7 days
+          </button>{" "}
+        </Link>
       </div>
     </div>
   );
 });
- 
