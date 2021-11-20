@@ -13,6 +13,6 @@ export const useWeekWeather = (coord = {lon:0, lat:0}) => {
     )
       .then((res) => res.json())
       .then(setData);
-  }, [lon]);
+  }, [lon, lat]);
     return data;
 };

@@ -1,6 +1,7 @@
 import React from "react";
 
-export const WeekWeatherCard = ({ date , icon, description, temp, humidity, feels_like }) => {
+export const WeekWeatherCard = ({ date , icon, description, temp, humidity, feels_like }) =>
+{
   
   return (
     <div className="Card">
@@ -27,3 +28,4 @@ export const WeekWeatherCard = ({ date , icon, description, temp, humidity, feel
     </div>
   );
 };
+export default WeekWeatherCard;

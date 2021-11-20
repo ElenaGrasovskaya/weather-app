@@ -3,8 +3,7 @@ import { useWeather } from "../hooks/useWeather";
 import "../App.css";
 import { GlobalContext } from "../App";
 import { Link } from "react-router-dom";
-import { useWeekWeather } from "../hooks/useWeekWeather";
-import { WeekWeather } from "../WeekWeather/App";
+
 export const Card = memo(({ city }) => {
   const { dispatch } = useContext(GlobalContext);
   const data = useWeather(city);
@@ -61,8 +60,8 @@ export const Card = memo(({ city }) => {
         <div>Feels like: {feels_like}</div>
         <Link to="/week-weather">
           <button className="week-weather" onClick={handleOnCoord}>
-            Weather for 7 days
-          </button>{" "}
+            Weather for the next 8 days
+          </button>
         </Link>
       </div>
     </div>
