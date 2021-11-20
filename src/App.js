@@ -10,12 +10,12 @@ import { useCitiesList } from "./hooks/useCitiesList";
 export const GlobalContext = React.createContext();
 function App() {
   const [state, dispatch] = useCitiesList();
-  const { inputValue, citiesList, editCity, coord } = state;
+  const { inputValue, citiesList, editCity, coord, currentCity } = state;
   return (
     <BrowserRouter>
       <GlobalContext.Provider value={{ state, dispatch }}>
         <Routes>
-          <Route path="/home" element={<Home />}></Route>
+          <Route path="/home" element={<Home/>}></Route>
           <Route path="/week-weather" element={<WeekWeather />}></Route>
         </Routes>
       </GlobalContext.Provider>

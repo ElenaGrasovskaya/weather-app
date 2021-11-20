@@ -39,7 +39,20 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
+  
 }
+
+.WeekWeatherCardList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  
+}
+.WeekForecastHeader {
+  text-align: center;
+}
+
 .Card {
   width: 200px;
   height: 350px;
@@ -83,19 +96,35 @@
   border: 2px solid black;
 }
 
+.week-weather-back-button {
+  width: 6em;
+  height: 2.5em;
+  border-radius: 12px;
+  margin-left: 5rem;
+  font-weight: 900;
+  border: none;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.week-weather-back-button:hover 
+{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border: 2px solid black;
+}
+
 .week-weather {
-  margin-top: 2rem;
+  
   width: auto;
   height: 2.5em;
   border-radius: 12px;
   display: block;
-  margin: 0 auto;
+  margin: 2rem auto;
   font-weight: 900;
   border: none;
   text-decoration: none;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    cursor: pointer;
+  cursor: pointer;
 }
 .week-weather:hover {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;

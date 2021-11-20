@@ -33,6 +33,10 @@ export const Card = memo(({ city }) => {
       type: "CHANGE_COORD",
       payload: data.coord,
     });
+    dispatch({
+      type: "CURRENT_CITY",
+      payload: city,
+    });
   };
 
   return (
@@ -60,7 +64,7 @@ export const Card = memo(({ city }) => {
         <div>Feels like: {feels_like}</div>
         <Link to="/week-weather">
           <button className="week-weather" onClick={handleOnCoord}>
-            Weather for the next 8 days
+            Next week forecast
           </button>
         </Link>
       </div>

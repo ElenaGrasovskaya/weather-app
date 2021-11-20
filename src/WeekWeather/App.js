@@ -10,7 +10,7 @@ export const WeekWeather = () => {
 
   const [data, setData] = useState({ daily: [] });
 
-  console.log("state", state.coord);
+  console.log("state.currentCity", state.currentCity);
   const allWeather = useWeekWeather(state.coord);
   if (!allWeather) return null;
 
@@ -27,7 +27,7 @@ export const WeekWeather = () => {
 
   for (let i = 0; i < 8; i++) {
     nextDate.setDate(currentDate.getDate() + i);
-    dates.push(nextDate.toLocaleDateString());
+    dates.push(nextDate.toDateString());
     weather.push(dailyArray[i].weather[0]);
     temp.push(dailyArray[i].temp.day);
     humidity.push(dailyArray[i].humidity);
@@ -38,11 +38,12 @@ export const WeekWeather = () => {
   console.log("weather", weather);
 
   return (
-    <>
+    <div className="Main">
       <Link to="/home">
-        <button className="week-weather">BACK</button>
+        <button className="week-weather-back-button">	&#8592; BACK</button>
       </Link>
-      <div className="CardList">
+      <h1 className ="WeekForecastHeader">Forecast for {state.currentCity}</h1>
+      <div className="WeekWeatherCardList">
         {dates.map((day, index) => (
           <WeekWeatherCard
             date={day}
@@ -55,6 +56,6 @@ export const WeekWeather = () => {
           ></WeekWeatherCard>
         ))}
       </div>
-    </>
+    </div>
   );
 };
